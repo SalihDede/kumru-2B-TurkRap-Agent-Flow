@@ -5,35 +5,7 @@
 > Kumru-2B Turkish LLM + LoRA adapters generate verses, Claude Haiku 4.5 orchestrates ideation/critique/hooks, and a shared memory system enables real-time cross-artist awareness during parallel writing.
 
 ## Architecture
-
-```
-Claude Haiku 4.5 (Orchestrator)
-  ├─► IDEATION ─── theme, mood, directives
-  ├─► STYLE PROFILER ─── artist-specific style prompts
-  └─► PRODUCER ─── song structure & section briefs
-          │
-      LangGraph
-          │
-   ┌──────┴──────┐
-   ▼              ▼
- Kumru-2B       Kumru-2B
- Sagopa LoRA ◄──► Ceza LoRA      ← SharedMemory (thread-safe)
-   └──────┬──────┘
-          ▼
-    VERSE CRITIC (Claude Haiku)
-     │ fail → both rewrite ↑
-     │ pass ↓
-    HOOK WRITER (Claude Haiku)
-          ▼
-    HOOK CRITIC (Claude Haiku)
-     │ fail → hook rewrites ↑
-     │ pass ↓
-    ASSEMBLY (Claude Haiku)
-          ▼
-    BEAT SUGGESTER (Claude Haiku)
-          ▼
-         END
-```
+![ProcessLine Mimari Diyagramı](./ProcessLine.png)
 
 ### Key Design Decisions
 
@@ -122,3 +94,4 @@ kumru-2B-TurkRap-Agent-Flow/
 ## License
 
 Apache 2.0
+

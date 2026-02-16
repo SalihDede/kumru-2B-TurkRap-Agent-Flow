@@ -5,7 +5,7 @@
 > Kumru-2B Turkish LLM + LoRA adapters generate verses, Claude Haiku 4.5 orchestrates ideation/critique/hooks, and a shared memory system enables real-time cross-artist awareness during parallel writing.
 
 ## Architecture
-![ProcessLine Mimari Diyagramı](./ProcessLine.png)
+![ProcessLine Mimari Diyagramı](./ProcessLineWhiteBG.png)
 
 ### Key Design Decisions
 
@@ -94,4 +94,5 @@ kumru-2B-TurkRap-Agent-Flow/
 ## License
 
 Apache 2.0
+
 
